@@ -1,2 +1,3 @@
-# ekstools
-An AWS linux image loaded with Terraform, Helm and Kubectl
+# Terraform Docker
+
+An AWS Linux image loaded with Terraform, Helm, AWS IAM authenticator and Kubectl.
