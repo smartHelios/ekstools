@@ -5,9 +5,10 @@ ARG IAM_AUTH_VERSION="0.6.2"
 RUN yum install -y shadow-utils
 
 # install utilities, AWS CLI and Terraform
+
 RUN yum install -y yum-utils awscli openssl git tar && \
     yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo && \
-    yum -y install terraform
+    yum -y install terraform vault && chown root /usr/bin/vault
 
 # install helm
 RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && \
