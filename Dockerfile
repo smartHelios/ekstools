@@ -6,7 +6,7 @@ RUN yum install -y shadow-utils
 
 # install utilities, AWS CLI and Terraform
 
-RUN yum install -y yum-utils awscli openssl git tar && \
+RUN yum install -y yum-utils awscli openssl git tar make && \
     yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo && \
     yum -y install terraform vault && chown root /usr/bin/vault
 
